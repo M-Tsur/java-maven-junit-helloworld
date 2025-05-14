@@ -80,6 +80,10 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.0.0</version>
+	<configuration>
+		<tempDir>surefire-${env.HARNESS_NODE_INDEX}</tempDir>
+		<reportsDirectory>surefire-reports-${env.HARNESS_NODE_INDEX}</reportsDirectory>
+	</configuration>
       </plugin>
       <plugin>
         <!-- Integration tests are run by failsafe. -->
